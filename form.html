@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>
+REGISTRATION FORM
+</title>
+</head>
+
+<body>
+<h1>REGISTRATION FORM</h1>
+<form action="/submit.php">
+First Name : <br><input type="name" size=20 maxlength=20/><br>
+Middle Name : <br><input type="name" size=20 maxlength=20/><br>
+Last Name : <br><input type="name"size=20 maxlength=20 /><br><br>
+
+Date of Birth : <br><input type="date" /><br><br>
+Time : <br><input type="time" /><br><br><br>
+
+Mobile Number : <br><input type="number" size=10 maxlength=10/><br><br>
+
+Sex : <br><input type="radio" name="gender" value="sex">Male<br>
+<input type="radio" name="gender" value="sex">Female<br>
+<input type="radio" name="gender" value="sex">Other<br><br>
+
+E-mail ID : <br><input type="email"/><br><br>
+
+Address : <br><textarea cols=50 rows=7></textarea><br><br>
+
+District :<br> 
+<select>
+<optgroup label="West Maharashtra">
+<option value="Ahemednagar">Ahemednagar</option></optgroup>
+<optgroup label="Vidharbha">
+<option value="Akola">Akola</option>
+<option value="Amravati">Amravati</option>
+</optgroup>
+</select>
+<br><br>
+
+<fieldset>
+<legend>HOBBIES</legend>
+<input type="checkbox"><bre>Painting</input><br>
+<input type="checkbox"><bre>Dancing</input><br>
+<input type="checkbox"><bre>Singing</input><br>
+<input type="checkbox"><bre>Sports</input><br>
+<input type="checkbox"><bre>Swimmig</input><br>
+</fieldset><br><br>
+
+Add Images : <input type="file"><br><br>
+
+<input type="submit" value="Submit">
+
+<input type="reset" value="Reset">
+<button type="button" onclick="alert('hello')">help</button>
+</form>
+</body>
+</html>

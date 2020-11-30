@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>
+Timepass
+</title>
+</head>
+
+<body bgcolor="black">
+
+<u><p align="center"><font face="georgia" size=15 color="sandybrown"><b><i>Om Londhe</i></b></font></p></u>
+
+<marquee vspace=10 bgcolor="yellow" scrolldelay=1 scrollamount=4><font size=4.5 color="black" face="monotype corsiva">Thanks for visiting the WebPage . You are welcome here , this Webpage will give you an extraordinary knowledge. For more information about this Webpage and me go to the <a href=#bottom>about</a> section below........ Thank You!!!</font></marquee>
+
+<font face="constantia" size=6 color="magenta">C programming :</font>
+
+<font face="palatino lonotype" size=4 color="white"><p align="left">C is a general-purpose, imperative computer programming language, supporting structured programming, lexical variable scope and recursion, while a static type system prevents many unintended operations. By design, C provides constructs that map efficiently to typical machine instructions, and therefore it has found lasting use in applications that had formerly been coded in assembly language, including operating systems, as well as various application software for computers ranging from supercomputers to embedded systems.</p></font>
+<marquee bgcolor="white" direction="up" hspace=1 vspace=15 scrollamount=2><p align="center"><font size=4><pre><b>Developer: Dennis Ritchie & Bell Labs (creators), ANSI X3J11 (ANSI C), ISO/IEC JTC1/SC22/WG14 (ISO C)
+Operating systems: Cross-platform software                                                                                                              
+Typing discipline: Static, weak, manifest, nominal 
+Paradigm: Imperative (procedural), structured</b></pre></font></p></marquee>
+<hr>
+<font face="constantia" size=6 color="magenta">C Tokens :</font>
+
+<font face="palatino lonotype" size=4 color="white">
+<ul>
+<a href=#Constant><li>Constants</li></a>
+<a href=#Variable><li>Variables</li></a>
+<a href=#Keyword><li>Keywords</li></a>
+<a href=#operator><li>Operators</li></a>
+For more information take a look at <a href=#ct>C Token Informaion</a> 
+</ul>
+</font>
+<hr>
+<p id="ct"><font face="constantia" size=6 color="magenta">Information about C Tokens :</font>
+<ol>
+<p id="Constant">
+<font size=5 color="white" face="white"><li>Constants :</li></font>
+<pre><font face="constania" color="white">
+A C constant is usually just the written version of a number. For example 1, 0, 5.73, 12.5e9. We can specify our constants in octal or hexadecimal, or force them to be treated as long integers.
+Octal constants are written with a leading zero - 015.
+Hexadecimal constants are written with a leading 0x - 0x1ae.
+Long constants are written with a trailing L - 890L.
+Character constants are usually just the character enclosed in single quotes; 'a', 'b', 'c'. Some characters can't be represented in this way, so we use a 2 character sequence as follows. 
+
+'\n'	newline
+'\t'	tab
+'\\'	backslash
+'\''	single quote
+'\0'	null ( Usedautomatically to terminate character string )
+
+In addition, a required bit pattern can be specified using its octal equivalent.
+'\044' produces bit pattern 00100100.
+Character constants are rarely used, since string constants are more convenient. A string constant is surrounded by double quotes eg "Brian and Dennis". The string is actually stored as an array of 
+characters. The null character '\0' is automatically placed at the end of such a string to act as a string terminator.
+A character is a different type to a single character string. This is important poing to note.
+Defining Constants
+ANSI C allows you to declare constants. When you declare a constant it is a bit like a variable declaration except the value cannot be changed.
+The const keyword is to declare a constant, as shown below:
+int const a = 1;
+const int a =2;
+
+Note:
+You can declare the const before or after the type. Choose one an stick to it.
+
+It is usual to initialise a const with a value as it cannot get a value any other way.
+The preprocessor #define is another more flexible (see Preprocessor Chapters) method to define constants in a program.
+
+#define TRUE		1
+#define	FALSE		0
+#define NAME_SIZE	20
+
+Here TRUE, FALSE and NAME_SIZE are constant
+You frequently see const declaration in function parameters. This says simply that the function is not going to change the value of the parameter.
+The following function definition used concepts we have not met (see chapters on functions, strings, pointers, and standard libraries) but for completenes of this section it is is included here:
+void strcpy(char *buffer, char const *string)
+</font></pre></p>
+<hr>
+<p id="Variable">
+<font size=5 color="white" face="white"><li>Variables :</li></font>
+<pre><font face="constania" color="white">
+A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C has a specific type, which determines the size and layout of the variable's memory; 
+the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
+The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C is 
+case-sensitive. Based on the basic types explained in the previous chapter, there will be the following basic variable types -
+
+C programming language also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc. For this chapter, 
+let us study only basic variable types.
+Variable Definition in C
+A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type and contains a list of one or more variables of that 
+type as follows -
+type variable_list;
+Here, type must be a valid C data type including char, w_char, int, float, double, bool, or any user-defined object; and variable_list may consist of one or more identifier names separated by commas. 
+Some valid declarations are shown here -
+int    i, j, k;
+char   c, ch;
+float  f, salary;
+double d;
+The line int i, j, k; declares and defines the variables i, j, and k; which instruct the compiler to create variables named i, j and k of type int.
+Variables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows -
+type variable_name = value;
+Some examples are -
+
+extern int d = 3, f = 5;    // declaration of d and f. 
+int d = 3, f = 5;           // definition and initializing d and f. 
+byte z = 22;                // definition and initializes z. 
+char x = 'x';               // the variable x has the value 'x'.
+
+For definition without an initializer: variables with static storage duration are implicitly initialized with NULL (all bytes have the value 0); the initial value of all other variables are undefined.
+<font size=4>Variable Declaration in C</font>
+A variable declaration provides assurance to the compiler that there exists a variable with the given type and name so that the compiler can proceed for further compilation without requiring the 
+complete detail about the variable. A variable definition has its meaning at the time of compilation only, the compiler needs actual variable definition at the time of linking the program.
+A variable declaration is useful when you are using multiple files and you define your variable in one of the files which will be available at the time of linking of the program. You will use the keyword 
+extern to declare a variable at any place. Though you can declare a variable multiple times in your C program, it can be defined only once in a file, a function, or a block of code.
+</font></pre></p>
+
+<hr>
+<p id="Keyword">
+<font size=5 color="white" face="white"><li>Keyword :</li></font>
+<pre><font face="constania" color="white">
+
+So far, we have covered two important concepts called variables and their data types. We discussed how to use int, long, and float to specify different data types. We also learnt how to name the 
+variables to store different values.
+Though this chapter is not required separately because reserved keywords are a part of basic programming syntax, we kept it separate to explain it right after data types and variables to make it 
+easy to understand.
+Like int, long, and float, there are many other keywords supported by C programming language which we will use for different purpose. Different programming languages provide different set of 
+reserved keywords, but there is one important & common rule in all the programming languages that we cannot use a reserved keyword to name our variables, which means we cannot name our variable 
+like int or float rather these keywords can only be used to specify a variable data type.
+For example, if you will try to use any reserved keyword for the purpose of variable name, then you will get a syntax error.
+
+<font size=4>C Programming Reserved Keywords</font>
+Here is a table having almost all the keywords supported by C Programming language -
+auto
+else
+long
+switch
+break
+enum
+register
+typedef
+case
+extern
+return
+union
+char
+float
+short
+unsigned
+const
+for
+signed
+void
+continue
+goto
+sizeof
+volatile
+default
+if
+static
+while
+do
+int
+struct
+_Packed
+double
+</font></pre></p>
+<hr>
+<p id="operator">
+<font size=5 color="white" face="white"><li>Operators :</li></font>
+<pre><font face="constania" color="white">
+An operator is a symbol that tells the compiler to perform specific mathematical or logical functions. C language is rich in built-in operators and provides the following types of operators -
+
+*Arithmetic Operators
+*Relational Operators
+*Logical Operators
+*Bitwise Operators
+*Assignment Operators
+*Misc Operators
+</font></pre></p>
+<hr>
+<font face="constantia" size=6 color="magenta">Basic Syntax of C :</font>
+
+<font face="palatino lonotype" size=4 color="white"><p align="left"><pre>
+                              header files
+                              return_type main()
+                              
+                              {
+
+                                 program codes
+
+                              }
+</pre></p></font>
+</p>
+<hr>
+<font face="constantia" size=6 color="magenta">Basic Program in C :</font>
+
+<font face="palatino lonotype" size=5 color="white"><p align="left"><pre>
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+   // printf() displays the string inside quotation
+   clrscr();
+   printf("Hello, World!");
+   getch();
+}
+</pre></p></font>
+
+
+
+<hr><hr>
+<p id="bottom"><font size=3 color="orange" face="roboto">About : 
+<ul type="square"><pre>
+<li>Name         : Om Prashant Londhe</li>
+<li>Mobile No. : 7276594467</li>
+<li><a href="mailto:oplondhe@gmail.com?subject= About feedback & body=Hello sir">Email          : oplondhe@gmail.com</li>
+</pre></font></ul></p>
+
+</body>
+</html>
+
+
+<ol type=i>
+<li>Arithmetic Operators -</li>
+<li>Logical Operatrs -</li>
+<li>Relational Operators -</li>
+<li>Bitwise Operators -</li>
+</ol>
